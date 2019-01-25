@@ -1,0 +1,2 @@
+in file /MyProject/Refrigerator/src/hardware/atmega8/cpu/config.h
+PARS_REFRIGERATOR_ARCHITECTURE_CPU         0x1000 <<--?

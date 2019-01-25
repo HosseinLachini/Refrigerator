@@ -1,0 +1,706 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+                              obj/Release/hardware/atmega8/cpu/Utils.o (__udivmodhi4)
+/home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+                              obj/Release/core/drivers/Time.o (__udivmodsi4)
+/home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+                              /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o (exit)
+/home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+                              obj/Release/core/drivers/Time.o (__do_copy_data)
+/home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+                              obj/Release/core/drivers/Buzzer.o (__do_clear_bss)
+/home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libc.a(memcpy_P.o)
+                              obj/Release/core/Settings.o (memcpy_P)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000002000 xr
+data             0x0000000000800060 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000002 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+user_signatures  0x0000000000850000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+LOAD obj/Release/hardware/atmega8/cpu/Timer2.o
+LOAD obj/Release/hardware/atmega8/cpu/Utils.o
+LOAD obj/Release/hardware/atmega8/targets/Speeno/Speeno.o
+LOAD obj/Release/core/drivers/Buzzer.o
+LOAD obj/Release/core/drivers/Time.o
+LOAD obj/Release/core/ParsRefrigerator.o
+LOAD obj/Release/core/Settings.o
+LOAD /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a
+LOAD /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a
+START GROUP
+LOAD /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a
+LOAD /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libm.a
+LOAD /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libc.a
+LOAD /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libatmega8.a
+END GROUP
+                0x0000000000002000                __TEXT_REGION_LENGTH__ = DEFINED (__TEXT_REGION_LENGTH__)?__TEXT_REGION_LENGTH__:0x2000
+                0x000000000000ffa0                __DATA_REGION_LENGTH__ = DEFINED (__DATA_REGION_LENGTH__)?__DATA_REGION_LENGTH__:0xffa0
+                0x0000000000010000                __EEPROM_REGION_LENGTH__ = DEFINED (__EEPROM_REGION_LENGTH__)?__EEPROM_REGION_LENGTH__:0x10000
+                [0x0000000000000002]                __FUSE_REGION_LENGTH__ = DEFINED (__FUSE_REGION_LENGTH__)?__FUSE_REGION_LENGTH__:0x400
+                0x0000000000000400                __LOCK_REGION_LENGTH__ = DEFINED (__LOCK_REGION_LENGTH__)?__LOCK_REGION_LENGTH__:0x400
+                0x0000000000000400                __SIGNATURE_REGION_LENGTH__ = DEFINED (__SIGNATURE_REGION_LENGTH__)?__SIGNATURE_REGION_LENGTH__:0x400
+                0x0000000000000400                __USER_SIGNATURE_REGION_LENGTH__ = DEFINED (__USER_SIGNATURE_REGION_LENGTH__)?__USER_SIGNATURE_REGION_LENGTH__:0x400
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000      0x556
+ *(.vectors)
+ .vectors       0x0000000000000000       0x26 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ .progmem.gcc_sw_table
+                0x0000000000000026       0x10 obj/Release/core/drivers/Buzzer.o
+                0x0000000000000036                . = ALIGN (0x2)
+                0x0000000000000036                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000000000000036        0x0 linker stubs
+ *(.trampolines*)
+                0x0000000000000036                __trampolines_end = .
+ *libprintf_flt.a:*(.progmem.data)
+ *libc.a:*(.progmem.data)
+ *(.progmem*)
+ .progmem.data  0x0000000000000036       0x38 obj/Release/core/Settings.o
+                0x0000000000000036                _ZN8Settings14UARTSpeedValueE
+                0x000000000000006e                . = ALIGN (0x2)
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000000000000006e                __ctors_start = .
+ *(.ctors)
+                0x000000000000006e                __ctors_end = .
+                0x000000000000006e                __dtors_start = .
+ *(.dtors)
+                0x000000000000006e                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000000000000006e        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+                0x000000000000006e                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000000000000006e        0xc /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000000000000007a       0x16 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+                0x000000000000007a                __do_copy_data
+ .init4         0x0000000000000090       0x10 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+                0x0000000000000090                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000000000000a0        0x4 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+ *(.init9)
+ *(.text)
+ .text          0x00000000000000a4        0x2 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+                0x00000000000000a4                __vector_1
+                0x00000000000000a4                __vector_12
+                0x00000000000000a4                __bad_interrupt
+                0x00000000000000a4                __vector_6
+                0x00000000000000a4                __vector_11
+                0x00000000000000a4                __vector_13
+                0x00000000000000a4                __vector_17
+                0x00000000000000a4                __vector_7
+                0x00000000000000a4                __vector_5
+                0x00000000000000a4                __vector_4
+                0x00000000000000a4                __vector_9
+                0x00000000000000a4                __vector_2
+                0x00000000000000a4                __vector_15
+                0x00000000000000a4                __vector_8
+                0x00000000000000a4                __vector_14
+                0x00000000000000a4                __vector_10
+                0x00000000000000a4                __vector_16
+                0x00000000000000a4                __vector_18
+ .text          0x00000000000000a6       0x5e obj/Release/hardware/atmega8/cpu/Timer2.o
+                0x00000000000000a6                __vector_3
+                0x00000000000000ec                _ZN4Time10initializeEv
+ .text          0x0000000000000104       0x40 obj/Release/hardware/atmega8/cpu/Utils.o
+                0x0000000000000104                _ZN5Utils17delayMillisecondsEj
+                0x000000000000011a                _ZN5Utils20delayTenMicrosecondsEj
+                0x000000000000013a                _ZN5Utils17delayMicrosecondsEj
+ .text          0x0000000000000144       0x2a obj/Release/hardware/atmega8/targets/Speeno/Speeno.o
+                0x0000000000000144                _ZN8hardware13getKeyPressedEv
+                0x0000000000000146                _ZN8hardware10initializeEv
+                0x0000000000000148                _ZN8hardware9setBuzzerEh
+                0x0000000000000154                _ZN8hardware14initializePinsEv
+ .text          0x000000000000016e      0x1cc obj/Release/core/drivers/Buzzer.o
+                0x000000000000016e                _ZN6Buzzer8soundOffEv
+                0x000000000000017c                _ZN6Buzzer5beginEv
+                0x0000000000000188                _ZN6Buzzer5soundENS_9SoundTypeE
+                0x00000000000001b8                _ZN6Buzzer14soundIfSilenceENS_9SoundTypeE
+                0x00000000000001ca                _Z4waveih
+                0x00000000000001f4                _ZN6Buzzer6getOffEj
+                0x00000000000001f8                _ZN6Buzzer6setOffEv
+                0x0000000000000208                _ZN6Buzzer11getKeyboardEj
+                0x0000000000000226                _ZN6Buzzer9getSelectEj
+                0x0000000000000266                _ZN6Buzzer7getInfoEj
+                0x0000000000000270                _ZN6Buzzer7getSaveEj
+                0x0000000000000292                _ZN6Buzzer15getStartProgramEj
+                0x0000000000000294                _ZN6Buzzer19getReversedPolarityEj
+                0x00000000000002bc                _ZN6Buzzer8getErrorEj
+                0x00000000000002e6                _ZN6Buzzer8getSoundEj
+                0x000000000000030a                _ZN6Buzzer6doIdleEv
+                0x0000000000000338                _ZN6Buzzer18getProgramCompleteEj
+ .text          0x000000000000033a       0xd8 obj/Release/core/drivers/Time.o
+                0x000000000000033a                _ZN4Time13getInterruptsEv
+                0x0000000000000352                _ZN4Time6doIdleEv
+                0x0000000000000354                _ZN4Time8callbackEv
+                0x000000000000038a                _ZN4Time14getMilisecondsEv
+                0x0000000000000396                _ZN4Time17getMilisecondsU16Ev
+                0x000000000000039c                _ZN4Time16getInterruptsU16Ev
+                0x00000000000003a2                _ZN4Time10getSecondsEv
+                0x00000000000003b4                _ZN4Time13getSecondsU16Ev
+                0x00000000000003ba                _ZN4Time13getMinutesU16Ev
+                0x00000000000003ca                _ZN4Time5delayEj
+                0x00000000000003ee                _ZN4Time11delayDoIdleEj
+ .text          0x0000000000000412       0x18 obj/Release/core/ParsRefrigerator.o
+                0x0000000000000412                setup
+ .text          0x000000000000042a       0xa8 obj/Release/core/Settings.o
+                0x000000000000042a                _ZNK8Settings12getUARTspeedEv
+                0x000000000000044a                _ZN8Settings4loadEv
+                0x000000000000044c                _ZN8Settings4saveEv
+                0x000000000000044e                _ZN8Settings10setDefaultEv
+                0x0000000000000458                _ZN8Settings14restoreDefaultEv
+                0x000000000000045e                _ZN8Settings5checkEv
+                0x00000000000004d0                _ZN8Settings5applyEv
+ .text          0x00000000000004d2        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .text          0x00000000000004d2        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+ .text          0x00000000000004d2        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .text          0x00000000000004d2        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .text          0x00000000000004d2        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .text          0x00000000000004d2        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libc.a(memcpy_P.o)
+                0x00000000000004d2                . = ALIGN (0x2)
+ *(.text.*)
+ .text.startup  0x00000000000004d2        0x2 obj/Release/core/ParsRefrigerator.o
+                0x00000000000004d2                main
+ .text.libgcc.mul
+                0x00000000000004d4        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.div
+                0x00000000000004d4       0x28 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+                0x00000000000004d4                __udivmodhi4
+ .text.libgcc   0x00000000000004fc        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.prologue
+                0x00000000000004fc        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.builtins
+                0x00000000000004fc        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fmul
+                0x00000000000004fc        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.fixed
+                0x00000000000004fc        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .text.libgcc.mul
+                0x00000000000004fc        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.div
+                0x00000000000004fc       0x44 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+                0x00000000000004fc                __udivmodsi4
+ .text.libgcc   0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.prologue
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.builtins
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fmul
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.fixed
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+ .text.libgcc.mul
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .text.libgcc.fixed
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.fixed
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc.fixed
+                0x0000000000000540        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x0000000000000540       0x12 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libc.a(memcpy_P.o)
+                0x0000000000000540                memcpy_P
+                0x0000000000000552                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000000000000552        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+                0x0000000000000552                exit
+                0x0000000000000552                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000000000000552        0x4 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000000000000556                _etext = .
+
+.data           0x0000000000800060        0x2 load address 0x0000000000000556
+                0x0000000000800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800060        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+ .data          0x0000000000800060        0x0 obj/Release/hardware/atmega8/cpu/Timer2.o
+ .data          0x0000000000800060        0x0 obj/Release/hardware/atmega8/cpu/Utils.o
+ .data          0x0000000000800060        0x0 obj/Release/hardware/atmega8/targets/Speeno/Speeno.o
+ .data          0x0000000000800060        0x0 obj/Release/core/drivers/Buzzer.o
+ .data          0x0000000000800060        0x1 obj/Release/core/drivers/Time.o
+ .data          0x0000000000800061        0x0 obj/Release/core/ParsRefrigerator.o
+ .data          0x0000000000800061        0x0 obj/Release/core/Settings.o
+ .data          0x0000000000800061        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .data          0x0000000000800061        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+ .data          0x0000000000800061        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .data          0x0000000000800061        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .data          0x0000000000800061        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .data          0x0000000000800061        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libc.a(memcpy_P.o)
+ *(.data*)
+ *(.gnu.linkonce.d*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.r*)
+                0x0000000000800062                . = ALIGN (0x2)
+ *fill*         0x0000000000800061        0x1 
+                0x0000000000800062                _edata = .
+                0x0000000000800062                PROVIDE (__data_end, .)
+
+.bss            0x0000000000800062       0x2e
+                0x0000000000800062                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0000000000800062        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+ .bss           0x0000000000800062        0x0 obj/Release/hardware/atmega8/cpu/Timer2.o
+ .bss           0x0000000000800062        0x0 obj/Release/hardware/atmega8/cpu/Utils.o
+ .bss           0x0000000000800062        0x0 obj/Release/hardware/atmega8/targets/Speeno/Speeno.o
+ .bss           0x0000000000800062        0x6 obj/Release/core/drivers/Buzzer.o
+                0x0000000000800062                _ZN6Buzzer6sound_E
+                0x0000000000800064                _ZN6Buzzer11last_value_E
+                0x0000000000800066                _ZN6Buzzer15begin_time_U16_E
+ .bss           0x0000000000800068        0x4 obj/Release/core/drivers/Time.o
+                0x0000000000800068                _ZN4Time11interrupts_E
+ .bss           0x000000000080006c        0x0 obj/Release/core/ParsRefrigerator.o
+ .bss           0x000000000080006c       0x24 obj/Release/core/Settings.o
+                0x000000000080006c                settings
+ .bss           0x0000000000800090        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .bss           0x0000000000800090        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+ .bss           0x0000000000800090        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .bss           0x0000000000800090        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .bss           0x0000000000800090        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+ .bss           0x0000000000800090        0x0 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libc.a(memcpy_P.o)
+ *(.bss*)
+ *(COMMON)
+                0x0000000000800090                PROVIDE (__bss_end, .)
+                0x0000000000000556                __data_load_start = LOADADDR (.data)
+                0x0000000000000558                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x0000000000800090        0x0
+                [!provide]                        PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                [!provide]                        PROVIDE (__noinit_end, .)
+                0x0000000000800090                _end = .
+                [!provide]                        PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.user_signatures
+ *(.user_signatures*)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x11
+ *(.comment)
+ .comment       0x0000000000000000       0x11 obj/Release/hardware/atmega8/cpu/Timer2.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000011       0x12 obj/Release/hardware/atmega8/cpu/Utils.o
+ .comment       0x0000000000000011       0x12 obj/Release/hardware/atmega8/targets/Speeno/Speeno.o
+ .comment       0x0000000000000011       0x12 obj/Release/core/drivers/Buzzer.o
+ .comment       0x0000000000000011       0x12 obj/Release/core/drivers/Time.o
+ .comment       0x0000000000000011       0x12 obj/Release/core/ParsRefrigerator.o
+ .comment       0x0000000000000011       0x12 obj/Release/core/Settings.o
+
+.note.gnu.avr.deviceinfo
+                0x0000000000000000       0x3c
+ .note.gnu.avr.deviceinfo
+                0x0000000000000000       0x3c /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+
+.avr.prop       0x0000000000000000       0x16
+ .avr.prop      0x0000000000000000       0x16 obj/Release/core/drivers/Buzzer.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0xa0
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x20 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .debug_aranges
+                0x0000000000000020       0x20 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+ .debug_aranges
+                0x0000000000000040       0x20 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .debug_aranges
+                0x0000000000000060       0x20 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .debug_aranges
+                0x0000000000000080       0x20 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000      0x7e3
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000      0x48c /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+ .debug_info    0x000000000000048c       0xab /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .debug_info    0x0000000000000537       0xab /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+ .debug_info    0x00000000000005e2       0xab /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .debug_info    0x000000000000068d       0xab /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .debug_info    0x0000000000000738       0xab /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+
+.debug_abbrev   0x0000000000000000      0x4b2
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x44e /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+ .debug_abbrev  0x000000000000044e       0x14 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .debug_abbrev  0x0000000000000462       0x14 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+ .debug_abbrev  0x0000000000000476       0x14 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .debug_abbrev  0x000000000000048a       0x14 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .debug_abbrev  0x000000000000049e       0x14 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+
+.debug_line     0x0000000000000000      0x38a
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000       0x1a /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+ .debug_line    0x000000000000001a       0xce /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+ .debug_line    0x00000000000000e8      0x122 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+ .debug_line    0x000000000000020a       0x62 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+ .debug_line    0x000000000000026c       0x98 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+ .debug_line    0x0000000000000304       0x86 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x0000000000000000      0x17a
+ *(.debug_str)
+ .debug_str     0x0000000000000000      0x17a /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+OUTPUT(bin/Release/M8CB.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+_Z4waveih                                         obj/Release/core/drivers/Buzzer.o
+_ZN4Time10getSecondsEv                            obj/Release/core/drivers/Time.o
+_ZN4Time10initializeEv                            obj/Release/hardware/atmega8/cpu/Timer2.o
+                                                  obj/Release/core/ParsRefrigerator.o
+_ZN4Time11delayDoIdleEj                           obj/Release/core/drivers/Time.o
+                                                  obj/Release/core/drivers/Buzzer.o
+_ZN4Time11interrupts_E                            obj/Release/core/drivers/Time.o
+_ZN4Time13getInterruptsEv                         obj/Release/core/drivers/Time.o
+_ZN4Time13getMinutesU16Ev                         obj/Release/core/drivers/Time.o
+_ZN4Time13getSecondsU16Ev                         obj/Release/core/drivers/Time.o
+_ZN4Time14getMilisecondsEv                        obj/Release/core/drivers/Time.o
+_ZN4Time16getInterruptsU16Ev                      obj/Release/core/drivers/Time.o
+                                                  obj/Release/core/drivers/Buzzer.o
+_ZN4Time17getMilisecondsU16Ev                     obj/Release/core/drivers/Time.o
+_ZN4Time5delayEj                                  obj/Release/core/drivers/Time.o
+                                                  obj/Release/core/ParsRefrigerator.o
+_ZN4Time6doIdleEv                                 obj/Release/core/drivers/Time.o
+_ZN4Time8callbackEv                               obj/Release/core/drivers/Time.o
+                                                  obj/Release/hardware/atmega8/cpu/Timer2.o
+_ZN5Utils17delayMicrosecondsEj                    obj/Release/hardware/atmega8/cpu/Utils.o
+_ZN5Utils17delayMillisecondsEj                    obj/Release/hardware/atmega8/cpu/Utils.o
+_ZN5Utils20delayTenMicrosecondsEj                 obj/Release/hardware/atmega8/cpu/Utils.o
+_ZN6Buzzer11getKeyboardEj                         obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer11last_value_E                          obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer14soundIfSilenceENS_9SoundTypeE         obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer15begin_time_U16_E                      obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer15getStartProgramEj                     obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer18getProgramCompleteEj                  obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer19getReversedPolarityEj                 obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer5beginEv                                obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer5soundENS_9SoundTypeE                   obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer6doIdleEv                               obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer6getOffEj                               obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer6setOffEv                               obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer6sound_E                                obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer7getInfoEj                              obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer7getSaveEj                              obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer8getErrorEj                             obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer8getSoundEj                             obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer8soundOffEv                             obj/Release/core/drivers/Buzzer.o
+_ZN6Buzzer9getSelectEj                            obj/Release/core/drivers/Buzzer.o
+_ZN8Settings10setDefaultEv                        obj/Release/core/Settings.o
+_ZN8Settings14UARTSpeedValueE                     obj/Release/core/Settings.o
+_ZN8Settings14restoreDefaultEv                    obj/Release/core/Settings.o
+_ZN8Settings4loadEv                               obj/Release/core/Settings.o
+_ZN8Settings4saveEv                               obj/Release/core/Settings.o
+_ZN8Settings5applyEv                              obj/Release/core/Settings.o
+_ZN8Settings5checkEv                              obj/Release/core/Settings.o
+_ZN8hardware10initializeEv                        obj/Release/hardware/atmega8/targets/Speeno/Speeno.o
+                                                  obj/Release/core/ParsRefrigerator.o
+_ZN8hardware13getKeyPressedEv                     obj/Release/hardware/atmega8/targets/Speeno/Speeno.o
+_ZN8hardware14initializePinsEv                    obj/Release/hardware/atmega8/targets/Speeno/Speeno.o
+                                                  obj/Release/core/ParsRefrigerator.o
+_ZN8hardware9setBuzzerEh                          obj/Release/hardware/atmega8/targets/Speeno/Speeno.o
+                                                  obj/Release/core/drivers/Buzzer.o
+_ZNK8Settings12getUARTspeedEv                     obj/Release/core/Settings.o
+__FUSE_REGION_LENGTH__                            /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__bad_interrupt                                   /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__bss_end                                         /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+__bss_start                                       /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+__data_end                                        /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+__data_load_start                                 /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+__data_start                                      /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+__do_clear_bss                                    /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_clear_bss.o)
+                                                  obj/Release/core/Settings.o
+                                                  obj/Release/core/drivers/Time.o
+                                                  obj/Release/core/drivers/Buzzer.o
+__do_copy_data                                    /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_copy_data.o)
+                                                  obj/Release/core/drivers/Time.o
+__heap_end                                        /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__init                                            /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__stack                                           /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__udivmodhi4                                      /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodhi4.o)
+                                                  obj/Release/core/drivers/Buzzer.o
+                                                  obj/Release/hardware/atmega8/cpu/Utils.o
+__udivmodsi4                                      /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_udivmodsi4.o)
+                                                  obj/Release/core/drivers/Time.o
+__vector_1                                        /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_10                                       /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_11                                       /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_12                                       /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_13                                       /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_14                                       /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_15                                       /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_16                                       /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_17                                       /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_18                                       /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_2                                        /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_3                                        obj/Release/hardware/atmega8/cpu/Timer2.o
+                                                  /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_4                                        /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_5                                        /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_6                                        /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_7                                        /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_8                                        /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_9                                        /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vector_default                                  /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+__vectors                                         /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+_exit                                             /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+exit                                              /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/avr4/libgcc.a(_exit.o)
+                                                  /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+main                                              obj/Release/core/ParsRefrigerator.o
+                                                  /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/crtatmega8.o
+memcpy_P                                          /home/lachini/Downloads/arduino-1.8.8/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr4/libc.a(memcpy_P.o)
+                                                  obj/Release/core/Settings.o
+settings                                          obj/Release/core/Settings.o
+                                                  obj/Release/core/drivers/Buzzer.o
+setup                                             obj/Release/core/ParsRefrigerator.o
