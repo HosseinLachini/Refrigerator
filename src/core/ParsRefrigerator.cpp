@@ -19,6 +19,7 @@
 #include "Buzzer.h"
 #include "Hardware.h"
 #include "cpu.h"
+#include "Settings.h"
 
 void setup()
 {
@@ -27,12 +28,14 @@ void setup()
 
     hardware::initialize();
     Time::initialize();
+    settings.audioBeep = 1;
+    Buzzer::soundError();
     while(1)
     {
      //IO::digitalWrite(LED_PIN,HIGH);
-     Time::delay(100);
+     Time::delayDoIdle(100);
      //IO::digitalWrite(LED_PIN,LOW);
-     PORTD ^= 0x01;
+     //Buzzer::doIdle();
     }
 }
 
