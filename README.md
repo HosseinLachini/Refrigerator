@@ -14,11 +14,16 @@ Three Keys
 Features
 --------
 - Larder Fridge
-  - 3 keys : Power, Alarm, Temp
+  - 3 keys : Temp.Setting, Super, ON-OFF
+  - Two digits seven-segment
+  - Alarm LED
+  - Super LED
   - Super mode
-  - Ambiance sensor fail mose
-  - Evaporator sensor mode
+  - Ambiance sensor fail mode
+  - Evaporator sensor fail mode
   - Ambiance + Evaporator sensors fail mode
+  - NTC 2k7 sensor
   - Setpoints 1~8 C
   - Auto test mode
   - State mode
+  - Compressor, Fan, Lamp control
