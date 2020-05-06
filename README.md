@@ -54,3 +54,13 @@ Features
   - Auto test mode
   - State mode
   - Compressor, Heater, Lamp control
+
+
+WARNING
+-------
+
+Hardware
+--------
+
+Usage:
+------
