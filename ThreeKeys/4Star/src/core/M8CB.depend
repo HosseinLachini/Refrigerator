@@ -1,0 +1,670 @@
+# depslib dependency file v1.0
+1570864322 source:/media/lachini/34C2-C1A1/Refrigerator/src/hardware/atmega8/cpu/Timer2.cpp
+	"Time.h"
+	"Hardware.h"
+	"atomic.h"
+
+1555243914 /media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Time.h
+	"Hardware.h"
+
+1555243914 /media/lachini/34C2-C1A1/Refrigerator/src/hardware/atmega8/targets/Speeno/Hardware.h
+	"Speeno.h"
+
+1578821240 /media/lachini/34C2-C1A1/Refrigerator/src/hardware/atmega8/targets/Speeno/Speeno.h
+	<stdint.h>
+	"HardwareConfig.h"
+	"Time.h"
+
+1555243914 /media/lachini/34C2-C1A1/Refrigerator/src/hardware/atmega8/targets/Speeno/HardwareConfig.h
+	"GlobalConfig.h"
+	"Speeno-pins.h"
+
+1555243914 /media/lachini/34C2-C1A1/Refrigerator/src/core/GlobalConfig.h
+
+1567842530 /media/lachini/34C2-C1A1/Refrigerator/src/hardware/atmega8/targets/Speeno/Speeno-pins.h
+
+1555243914 /media/lachini/34C2-C1A1/Refrigerator/src/hardware/atmega8/cpu/atomic.h
+	<util/atomic.h>
+
+1555243914 source:/media/lachini/34C2-C1A1/Refrigerator/src/hardware/atmega8/cpu/Utils.cpp
+	"Utils.h"
+	<util/delay.h>
+
+1555243914 /media/lachini/34C2-C1A1/Refrigerator/src/core/Utils.h
+	"AnalogInputsTypes.h"
+
+1555243914 /media/lachini/34C2-C1A1/Refrigerator/src/core/AnalogInputsTypes.h
+	<stdint.h>
+
+1570968560 source:/media/lachini/34C2-C1A1/Refrigerator/src/hardware/atmega8/targets/Speeno/AnalogInputsADC.cpp
+	"AnalogInputsADC.h"
+	"IO.h"
+	<avr/pgmspace.h>
+
+1570969132 /media/lachini/34C2-C1A1/Refrigerator/src/hardware/atmega8/targets/Speeno/AnalogInputsADC.h
+	<stdint.h>
+
+1580312100 /media/lachini/34C2-C1A1/Refrigerator/src/hardware/atmega8/cpu/IO.h
+	<stdint.h>
+	<avr/io.h>
+
+1578821240 source:/media/lachini/34C2-C1A1/Refrigerator/src/hardware/atmega8/targets/Speeno/Speeno.cpp
+	"Hardware.h"
+	"IO.h"
+	"AnalogInputsADC.h"
+
+1567940836 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Buzzer.cpp
+	"Hardware.h"
+	"Buzzer.h"
+	"Settings.h"
+
+1567605508 /media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Buzzer.h
+
+1580135586 /media/lachini/34C2-C1A1/Refrigerator/src/core/Settings.h
+	<stdint.h>
+	"AnalogInputs.h"
+
+1555243914 /media/lachini/34C2-C1A1/Refrigerator/src/core/AnalogInputs.h
+	"AnalogInputsTypes.h"
+	"HardwareConfig.h"
+	"cpu/config.h"
+
+1555243914 /media/lachini/34C2-C1A1/Refrigerator/src/hardware/atmega8/cpu/config.h
+
+1580213638 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Comperssor.cpp
+	"Comperssor.h"
+	"Hardware.h"
+	"Settings.h"
+	"Time.h"
+	"Sensors.h"
+	"Heater.h"
+
+1580102978 /media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Comperssor.h
+	<stdint.h>
+
+1570969158 /media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Sensors.h
+	<stdint.h>
+
+1579506964 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/DisplayPanel.cpp
+	"DisplayPanel.h"
+	"SoftI2C.h"
+	"Buzzer.h"
+	"Hardware.h"
+
+1579503138 /media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/DisplayPanel.h
+	<stdint.h>
+
+1568637702 /media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/SoftI2C.h
+	<stdint.h>
+
+1579338734 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Door.cpp
+	"Hardware.h"
+	"Buzzer.h"
+	"Door.h"
+	"DisplayPanel.h"
+	"Settings.h"
+
+1579338710 /media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Door.h
+	<stdint.h>
+
+1579338698 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Fan.cpp
+	"Fan.h"
+	"Hardware.h"
+	"Door.h"
+	"Comperssor.h"
+	"Sensors.h"
+	"Settings.h"
+
+1570275898 /media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Fan.h
+	<stdint.h>
+
+1577078746 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Heater.cpp
+	"Heater.h"
+	"Hardware.h"
+
+1580138246 /media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Heater.h
+	<stdint.h>
+
+1579338740 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Lamp.cpp
+	"Lamp.h"
+	"Hardware.h"
+	"Buzzer.h"
+	"Door.h"
+
+1567837748 /media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Lamp.h
+
+1570969158 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Sensors.cpp
+	"Sensors.h"
+	"AnalogInputsADC.h"
+	"Hardware.h"
+
+1568637704 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/SoftI2C.cpp
+	"SoftI2C.h"
+	"Hardware.h"
+	"Utils.h"
+
+1580196938 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/drivers/Time.cpp
+	"Time.h"
+	"Hardware.h"
+	"Buzzer.h"
+	"Lamp.h"
+	"Door.h"
+	"DisplayPanel.h"
+	"Fan.h"
+	"Comperssor.h"
+	"Sensors.h"
+	"Heater.h"
+	"atomic.h"
+
+1576301762 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/menus/MainMenu.cpp
+	"MainMenu.h"
+	"Menu.h"
+	"Time.h"
+	<stdint.h>
+
+1571047300 /media/lachini/34C2-C1A1/Refrigerator/src/core/menus/MainMenu.h
+
+1580027092 /media/lachini/34C2-C1A1/Refrigerator/src/core/menus/Menu.h
+	<stdint.h>
+
+1580563038 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/menus/Menu.cpp
+	"Menu.h"
+	"Settings.h"
+	"DisplayPanel.h"
+	"Time.h"
+	"Sensors.h"
+	"Heater.h"
+	"Door.h"
+
+1580533748 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/ParsRefrigerator.cpp
+	"ParsRefrigerator.h"
+	"Buzzer.h"
+	"Door.h"
+	"Fan.h"
+	"Hardware.h"
+	"cpu.h"
+	"Settings.h"
+	"SoftI2C.h"
+	"DisplayPanel.h"
+	"AnalogInputsADC.h"
+	"Comperssor.h"
+	"Sensors.h"
+	"MainMenu.h"
+
+1555243914 /media/lachini/34C2-C1A1/Refrigerator/src/core/ParsRefrigerator.h
+
+1555243914 /media/lachini/34C2-C1A1/Refrigerator/src/hardware/atmega8/cpu/cpu.h
+	<avr/interrupt.h>
+
+1555243914 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/Settings.cpp
+	"Hardware.h"
+	"memory.h"
+	"Buzzer.h"
+	"Settings.h"
+
+1555243914 /media/lachini/34C2-C1A1/Refrigerator/src/hardware/atmega8/cpu/memory.h
+	<avr/pgmspace.h>
+	<avr/eeprom.h>
+
+1570958526 source:/media/lachini/34C2-C1A1/Refrigerator/src/core/Utils.cpp
+	"Utils.h"
+	"Hardware.h"
+	"AnalogInputs.h"
+	"memory.h"
+
+1583760736 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/hardware/atmega8/cpu/Timer2.cpp
+	"Time.h"
+	"Hardware.h"
+	"atomic.h"
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Time.h
+	"Hardware.h"
+
+1578222850 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/hardware/atmega8/targets/ThreeKeys/Hardware.h
+	"ThreeKeys.h"
+
+1586601326 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/hardware/atmega8/targets/ThreeKeys/ThreeKeys.h
+	<stdint.h>
+	"HardwareConfig.h"
+	"Time.h"
+
+1578222866 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/hardware/atmega8/targets/ThreeKeys/HardwareConfig.h
+	"GlobalConfig.h"
+	"ThreeKeys-pins.h"
+
+1581506502 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/GlobalConfig.h
+
+1586257572 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/hardware/atmega8/targets/ThreeKeys/ThreeKeys-pins.h
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/hardware/atmega8/cpu/atomic.h
+	<util/atomic.h>
+
+1555243914 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/hardware/atmega8/cpu/Utils.cpp
+	"Utils.h"
+	<util/delay.h>
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/Utils.h
+	"AnalogInputsTypes.h"
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/AnalogInputsTypes.h
+	<stdint.h>
+
+1586799682 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/hardware/atmega8/targets/ThreeKeys/AnalogInputsADC.cpp
+	"AnalogInputsADC.h"
+	"IO.h"
+
+1586796552 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/hardware/atmega8/targets/ThreeKeys/AnalogInputsADC.h
+	<stdint.h>
+
+1586322704 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/hardware/atmega8/cpu/IO.h
+	<stdint.h>
+	<avr/io.h>
+
+1586601742 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/hardware/atmega8/targets/ThreeKeys/ThreeKeys.cpp
+	"Hardware.h"
+	"IO.h"
+	"AnalogInputsADC.h"
+
+1583760736 source:/media/sdb1/Refrigerator/3Test/src/hardware/atmega8/cpu/Timer2.cpp
+	"Time.h"
+	"Hardware.h"
+	"atomic.h"
+
+1555243914 /media/sdb1/Refrigerator/3Test/src/core/drivers/Time.h
+	"Hardware.h"
+
+1578222850 /media/sdb1/Refrigerator/3Test/src/hardware/atmega8/targets/ThreeKeys/Hardware.h
+	"ThreeKeys.h"
+
+1586231622 /media/sdb1/Refrigerator/3Test/src/hardware/atmega8/targets/ThreeKeys/ThreeKeys.h
+	<stdint.h>
+	"HardwareConfig.h"
+	"Time.h"
+
+1578222866 /media/sdb1/Refrigerator/3Test/src/hardware/atmega8/targets/ThreeKeys/HardwareConfig.h
+	"GlobalConfig.h"
+	"ThreeKeys-pins.h"
+
+1581506502 /media/sdb1/Refrigerator/3Test/src/core/GlobalConfig.h
+
+1586257572 /media/sdb1/Refrigerator/3Test/src/hardware/atmega8/targets/ThreeKeys/ThreeKeys-pins.h
+
+1555243914 /media/sdb1/Refrigerator/3Test/src/hardware/atmega8/cpu/atomic.h
+	<util/atomic.h>
+
+1555243914 source:/media/sdb1/Refrigerator/3Test/src/hardware/atmega8/cpu/Utils.cpp
+	"Utils.h"
+	<util/delay.h>
+
+1555243914 /media/sdb1/Refrigerator/3Test/src/core/Utils.h
+	"AnalogInputsTypes.h"
+
+1555243914 /media/sdb1/Refrigerator/3Test/src/core/AnalogInputsTypes.h
+	<stdint.h>
+
+1570968560 source:/media/sdb1/Refrigerator/3Test/src/hardware/atmega8/targets/ThreeKeys/AnalogInputsADC.cpp
+	"AnalogInputsADC.h"
+	"IO.h"
+	<avr/pgmspace.h>
+
+1570969132 /media/sdb1/Refrigerator/3Test/src/hardware/atmega8/targets/ThreeKeys/AnalogInputsADC.h
+	<stdint.h>
+
+1586322704 /media/sdb1/Refrigerator/3Test/src/hardware/atmega8/cpu/IO.h
+	<stdint.h>
+	<avr/io.h>
+
+1586436949 source:/media/sdb1/Refrigerator/3Test/src/hardware/atmega8/targets/ThreeKeys/ThreeKeys.cpp
+	"Hardware.h"
+	"IO.h"
+	"AnalogInputsADC.h"
+
+1586344242 source:/media/sdb1/Refrigerator/3Test/src/core/drivers/Buzzer.cpp
+	"Hardware.h"
+	"Buzzer.h"
+	"Settings.h"
+
+1567605508 /media/sdb1/Refrigerator/3Test/src/core/drivers/Buzzer.h
+
+1586446399 /media/sdb1/Refrigerator/3Test/src/core/Settings.h
+	<stdint.h>
+	"AnalogInputs.h"
+
+1555243914 /media/sdb1/Refrigerator/3Test/src/core/AnalogInputs.h
+	"AnalogInputsTypes.h"
+	"HardwareConfig.h"
+	"cpu/config.h"
+
+1555243914 /media/sdb1/Refrigerator/3Test/src/hardware/atmega8/cpu/config.h
+
+1586446445 source:/media/sdb1/Refrigerator/3Test/src/core/drivers/Compressor_Larder.cpp
+	"Compressor.h"
+	"Hardware.h"
+	"Settings.h"
+	"Time.h"
+	"Sensors.h"
+
+1586440294 /media/sdb1/Refrigerator/3Test/src/core/drivers/Compressor.h
+	<stdint.h>
+
+1570969158 /media/sdb1/Refrigerator/3Test/src/core/drivers/Sensors.h
+	<stdint.h>
+
+1579338734 source:/media/sdb1/Refrigerator/3Test/src/core/drivers/Door.cpp
+	"Hardware.h"
+	"Buzzer.h"
+	"Door.h"
+	"DisplayPanel.h"
+	"Settings.h"
+
+1579338710 /media/sdb1/Refrigerator/3Test/src/core/drivers/Door.h
+	<stdint.h>
+
+1586418497 /media/sdb1/Refrigerator/3Test/src/core/drivers/DisplayPanel.h
+	"Three_Push_Button_Switch.h"
+	"SM1612.h"
+
+1586446606 /media/sdb1/Refrigerator/3Test/src/core/drivers/Three_Push_Button_Switch.h
+	<stdint.h>
+
+1586440294 source:/media/sdb1/Refrigerator/3Test/src/core/drivers/Fan_Larder.cpp
+	"Fan.h"
+	"Hardware.h"
+	"Door.h"
+	"Compressor.h"
+	"Sensors.h"
+	"Settings.h"
+
+1586426660 /media/sdb1/Refrigerator/3Test/src/core/drivers/Fan.h
+	<stdint.h>
+
+1579338740 source:/media/sdb1/Refrigerator/3Test/src/core/drivers/Lamp.cpp
+	"Lamp.h"
+	"Hardware.h"
+	"Buzzer.h"
+	"Door.h"
+
+1567837748 /media/sdb1/Refrigerator/3Test/src/core/drivers/Lamp.h
+
+1583311034 source:/media/sdb1/Refrigerator/3Test/src/core/drivers/Sensors.cpp
+	"Sensors.h"
+	"AnalogInputsADC.h"
+	"Hardware.h"
+	"Settings.h"
+
+1586443128 source:/media/sdb1/Refrigerator/3Test/src/core/drivers/Time.cpp
+	"Time.h"
+	"Hardware.h"
+	"Buzzer.h"
+	"Lamp.h"
+	"Door.h"
+	"DisplayPanel.h"
+	"Fan.h"
+	"Compressor.h"
+	"Sensors.h"
+	"Heater.h"
+	"Settings.h"
+	"atomic.h"
+
+1580138246 /media/sdb1/Refrigerator/3Test/src/core/drivers/Heater.h
+	<stdint.h>
+
+1581331514 source:/media/sdb1/Refrigerator/3Test/src/core/menus/MainMenu.cpp
+	"MainMenu.h"
+	"Menu.h"
+	"Time.h"
+	"TestMenu.h"
+	"Settings.h"
+	<stdint.h>
+
+1571047300 /media/sdb1/Refrigerator/3Test/src/core/menus/MainMenu.h
+
+1580027092 /media/sdb1/Refrigerator/3Test/src/core/menus/Menu.h
+	<stdint.h>
+
+1581251230 /media/sdb1/Refrigerator/3Test/src/core/menus/TestMenu.h
+
+1586446551 source:/media/sdb1/Refrigerator/3Test/src/core/menus/MenuLarder.cpp
+	"Menu.h"
+	"Settings.h"
+	"DisplayPanel.h"
+	"Time.h"
+	"Sensors.h"
+	"Door.h"
+	"Buzzer.h"
+	"Compressor.h"
+	"memory.h"
+
+1555243914 /media/sdb1/Refrigerator/3Test/src/hardware/atmega8/cpu/memory.h
+	<avr/pgmspace.h>
+	<avr/eeprom.h>
+
+1586440294 source:/media/sdb1/Refrigerator/3Test/src/core/menus/TestMenu.cpp
+	"TestMenu.h"
+	"Time.h"
+	"Settings.h"
+	"DisplayPanel.h"
+	"Buzzer.h"
+	"Fan.h"
+	"Compressor.h"
+	"Lamp.h"
+	"Heater.h"
+	"Sensors.h"
+	"Hardware.h"
+
+1586440294 source:/media/sdb1/Refrigerator/3Test/src/core/ParsRefrigerator.cpp
+	"ParsRefrigerator.h"
+	"Buzzer.h"
+	"Door.h"
+	"Fan.h"
+	"Hardware.h"
+	"cpu.h"
+	"Settings.h"
+	"DisplayPanel.h"
+	"AnalogInputsADC.h"
+	"Compressor.h"
+	"Sensors.h"
+	"MainMenu.h"
+	"memory.h"
+
+1555243914 /media/sdb1/Refrigerator/3Test/src/core/ParsRefrigerator.h
+
+1555243914 /media/sdb1/Refrigerator/3Test/src/hardware/atmega8/cpu/cpu.h
+	<avr/interrupt.h>
+
+1581506252 source:/media/sdb1/Refrigerator/3Test/src/core/Settings.cpp
+	"Hardware.h"
+	"memory.h"
+	"Buzzer.h"
+	"Settings.h"
+	"eeprom.h"
+
+1581508862 /media/sdb1/Refrigerator/3Test/src/core/eeprom.h
+	"AnalogInputs.h"
+	"Settings.h"
+	"cpu.h"
+
+1570958526 source:/media/sdb1/Refrigerator/3Test/src/core/Utils.cpp
+	"Utils.h"
+	"Hardware.h"
+	"AnalogInputs.h"
+	"memory.h"
+
+1586344242 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Buzzer.cpp
+	"Hardware.h"
+	"Buzzer.h"
+	"Settings.h"
+
+1567605508 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Buzzer.h
+
+1586797108 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/Settings.h
+	<stdint.h>
+	"AnalogInputs.h"
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/AnalogInputs.h
+	"AnalogInputsTypes.h"
+	"HardwareConfig.h"
+	"cpu/config.h"
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/hardware/atmega8/cpu/config.h
+
+1586795976 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Compressor_Larder.cpp
+	"Compressor.h"
+	"Hardware.h"
+	"Settings.h"
+	"Time.h"
+	"Sensors.h"
+
+1586440294 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Compressor.h
+	<stdint.h>
+
+1586796382 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Sensors.h
+	<stdint.h>
+
+1579338734 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Door.cpp
+	"Hardware.h"
+	"Buzzer.h"
+	"Door.h"
+	"DisplayPanel.h"
+	"Settings.h"
+
+1579338710 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Door.h
+	<stdint.h>
+
+1586418496 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/DisplayPanel.h
+	"Three_Push_Button_Switch.h"
+	"SM1612.h"
+
+1586795482 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Three_Push_Button_Switch.h
+	<stdint.h>
+
+1586440294 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Fan_Larder.cpp
+	"Fan.h"
+	"Hardware.h"
+	"Door.h"
+	"Compressor.h"
+	"Sensors.h"
+	"Settings.h"
+
+1586426660 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Fan.h
+	<stdint.h>
+
+1586595456 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Lamp.cpp
+	"Lamp.h"
+	"Hardware.h"
+	"Buzzer.h"
+	"Door.h"
+
+1586448664 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Lamp.h
+
+1586796176 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Sensors.cpp
+	"Sensors.h"
+	"AnalogInputsADC.h"
+	"Hardware.h"
+	"Settings.h"
+
+1586799542 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Three_Push_Button_Switch.cpp
+	"DisplayPanel.h"
+	"Buzzer.h"
+	"Hardware.h"
+	"memory.h"
+	"Settings.h"
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/hardware/atmega8/cpu/memory.h
+	<avr/pgmspace.h>
+	<avr/eeprom.h>
+
+1586443128 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Time.cpp
+	"Time.h"
+	"Hardware.h"
+	"Buzzer.h"
+	"Lamp.h"
+	"Door.h"
+	"DisplayPanel.h"
+	"Fan.h"
+	"Compressor.h"
+	"Sensors.h"
+	"Heater.h"
+	"Settings.h"
+	"atomic.h"
+
+1580138246 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/drivers/Heater.h
+	<stdint.h>
+
+1586601100 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/menus/MainMenu.cpp
+	"MainMenu.h"
+	"Menu.h"
+	"Time.h"
+	"TestMenu.h"
+	"Settings.h"
+	<stdint.h>
+
+1571047300 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/menus/MainMenu.h
+
+1580027092 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/menus/Menu.h
+	<stdint.h>
+
+1581251230 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/menus/TestMenu.h
+
+1586797670 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/menus/MenuLarder.cpp
+	"Menu.h"
+	"Settings.h"
+	"DisplayPanel.h"
+	"Time.h"
+	"Sensors.h"
+	"Door.h"
+	"Buzzer.h"
+	"Compressor.h"
+	"memory.h"
+
+1586764420 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/menus/TestMenu.cpp
+	"TestMenu.h"
+	"Time.h"
+	"Settings.h"
+	"DisplayPanel.h"
+	"Buzzer.h"
+	"Fan.h"
+	"Compressor.h"
+	"Lamp.h"
+	"Heater.h"
+	"Sensors.h"
+	"Hardware.h"
+
+1586797110 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/ParsRefrigerator.cpp
+	"ParsRefrigerator.h"
+	"Buzzer.h"
+	"Door.h"
+	"Fan.h"
+	"Hardware.h"
+	"cpu.h"
+	"Settings.h"
+	"DisplayPanel.h"
+	"AnalogInputsADC.h"
+	"Compressor.h"
+	"Sensors.h"
+	"MainMenu.h"
+	"memory.h"
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/ParsRefrigerator.h
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/hardware/atmega8/cpu/cpu.h
+	<avr/interrupt.h>
+
+1581506252 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/Settings.cpp
+	"Hardware.h"
+	"memory.h"
+	"Buzzer.h"
+	"Settings.h"
+	"eeprom.h"
+
+1581508862 /media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/eeprom.h
+	"AnalogInputs.h"
+	"Settings.h"
+	"cpu.h"
+
+1570958526 source:/media/lachini/Sony_32SA1/Refrigerator/3Test/src/core/Utils.cpp
+	"Utils.h"
+	"Hardware.h"
+	"AnalogInputs.h"
+	"memory.h"
+
