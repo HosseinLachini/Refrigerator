@@ -27,3 +27,30 @@ Features
   - Auto test mode
   - State mode
   - Compressor, Fan, Lamp control
+- 4-Stars Fridge
+  - 3 keys : Temp.Setting, Super, ON-OFF
+  - Two digits seven-segment
+  - Alarm LED
+  - Super LED
+  - Super mode
+  - Ambiance sensor fail mode
+  - Evaporator sensor fail mode
+  - Ambiance + Evaporator sensors fail mode
+  - NTC 2k7 sensor
+  - Setpoints 1~8 C
+  - Auto test mode
+  - State mode
+  - Compressor, Lamp control
+- No-Frost Freezer
+  - 3 keys : Temp.Setting, Super, ON-OFF
+  - Two digits seven-segment
+  - Alarm LED
+  - Super LED
+  - Super mode
+  - Defrost mode
+  - Ambiance sensor fail mode
+  - NTC 2k7 sensor
+  - Setpoints -16~-24 C
+  - Auto test mode
+  - State mode
+  - Compressor, Heater, Lamp control
