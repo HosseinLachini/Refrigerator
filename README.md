@@ -8,14 +8,19 @@ Don't use it if You don't need to
 
 Three Keys Display Panel
 ------------------------
-Three keys display panel designed by [ITW APPLIANCE REFRIGERATION PRODUCTS GROUP](http://www.itwappliance.com/novosite/products.php?FhIdCategoria=1), with PIC microcontroller([PIC16F872](http://ww1.microchip.com/downloads/en/devicedoc/30221c.pdf)). This board used for Larder, 4-Star and Nofrost products in PARS company. I changed MCU to AVR microcontroller and wirte program with C++ to easly change MCU to any microcontroller for example you can use an ARM.
+Old model of digital temperature controller -thermostat- with **three keys display panel** designed by [ITW APPLIANCE REFRIGERATION PRODUCTS GROUP](http://www.itwappliance.com/novosite/products.php?FhIdCategoria=1), this temperature controller based on PIC microcontroller([PIC16F872](http://ww1.microchip.com/downloads/en/devicedoc/30221c.pdf)). This board used for Larder, 4-Star and Nofrost products in PARS company. I changed MCU to AVR microcontroller and wirte cross-platform program with C++ to easly change MCU to any microcontroller for example you can use an ARM.
 
 ![PARS Three Keys Display Panel](/ThreeKeys/Larder/doc/Photo/DisplayPanel.png)
 
 
-Pars Lader Fridge
+Pars Larder Fridge
 --------
 ![PARS Larder Refrigerator](/ThreeKeys/Larder/doc/Photo/pars%20larder1700.jpg)
+
+
+Pars 4-Star Fridge
+--------
+![PARS 4-Star Refrigerator](/ThreeKeys/4Star/doc/Photo/4-Star.jpg)
 
 
 Features
