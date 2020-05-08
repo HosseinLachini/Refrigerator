@@ -12,8 +12,9 @@ Three keys display panel designed by ITW APPLIANCE REFRIGERATION PRODUCTS GROUP,
 
 ![PARS Three Keys Display Panel](/ThreeKeys/Larder/doc/Photo/DisplayPanel.png)
 
-Three Keys Display Panel
 
+Pars Lader Fridge
+--------
 ![PARS Larder Refrigerator](/ThreeKeys/Larder/doc/Photo/pars%20larder1700.jpg)
 
 
