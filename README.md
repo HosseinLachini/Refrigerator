@@ -6,10 +6,15 @@ This project is an alternative firmware for a variety of PARS Refrigerators,
 Don't use it if You don't need to
 (not everything is implemented yet).
 
-Three Keys
-----------
+Three Keys Display Panel
+------------------------
+Three keys display panel designed by ITW APPLIANCE REFRIGERATION PRODUCTS GROUP, with PIC microcontroller. This board used for Larder, 4-Star and Nofrost products in PARS company. I changed MCU to AVR microcontroller and wirte program with C++ to easly change MCU to any microcontroller for example you can use an ARM.
 
-![PARS Refrigerator](/ThreeKeys/Larder/doc/Photo/DisplayPanel.png)
+![PARS Three Keys Display Panel](/ThreeKeys/Larder/doc/Photo/DisplayPanel.png)
+
+###Larder refigerator:
+![PARS Larder Refrigerator](/ThreeKeys/Larder/doc/Photo/Larder_vs_4Star.jpg)
+
 
 Features
 --------
