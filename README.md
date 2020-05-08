@@ -8,7 +8,7 @@ Don't use it if You don't need to
 
 Three Keys Display Panel
 ------------------------
-Three keys display panel designed by ITW APPLIANCE REFRIGERATION PRODUCTS GROUP, with PIC microcontroller. This board used for Larder, 4-Star and Nofrost products in PARS company. I changed MCU to AVR microcontroller and wirte program with C++ to easly change MCU to any microcontroller for example you can use an ARM.
+Three keys display panel designed by [ITW APPLIANCE REFRIGERATION PRODUCTS GROUP](http://www.itwappliance.com/novosite/products.php?FhIdCategoria=1), with PIC microcontroller. This board used for Larder, 4-Star and Nofrost products in PARS company. I changed MCU to AVR microcontroller and wirte program with C++ to easly change MCU to any microcontroller for example you can use an ARM.
 
 ![PARS Three Keys Display Panel](/ThreeKeys/Larder/doc/Photo/DisplayPanel.png)
 
