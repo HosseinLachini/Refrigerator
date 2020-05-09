@@ -77,7 +77,7 @@ Touch Display Panel
 ------
 
 
-![PARS Touch Display Panel](/TouchPanel/SM1612/Boran/doc/PhotoDisplayPanel.jpg)
+![PARS Touch Display Panel](/TouchPanel/SM1612/Boran/doc/Photo/DisplayPanel.jpg)
 
 
 WARNING
