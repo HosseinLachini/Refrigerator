@@ -1,5 +1,5 @@
 # Welcome to Lachini Refrigerator
-This project is an alternative firmware for a variety of PARS Refrigerators,
+This project is an alternative firmware for a variety of [PARS](http://parsappliance.com/) Refrigerators,
 
 ![PARS Refrigerator](PARS_LOGO.png)
 
@@ -21,6 +21,11 @@ Pars Larder Fridge
 Pars 4-Star Fridge
 --------
 ![PARS 4-Star Refrigerator](/ThreeKeys/4Star/doc/Photo/4-Star.jpg)
+
+
+Pars Nofrost Freezer
+--------
+![Pars Nofrost Freezer](/ThreeKeys/Nofrost/doc/Photo/F1700-Open-L.jpg)
 
 
 Features
@@ -66,6 +71,13 @@ Features
   - Auto test mode
   - State mode
   - Compressor, Heater, Lamp control
+  
+  
+Touch Display Panel
+------
+
+
+![PARS Touch Display Panel](/Touch/Boran/doc/Photo/DisplayPanel.jpg)
 
 
 WARNING
