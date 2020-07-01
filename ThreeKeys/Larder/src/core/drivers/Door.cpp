@@ -41,7 +41,7 @@ void Door::doIdle()
             open_time_U16_ = Time::getSecondsU16();
             if(counter_ < 0xff)
                 ++counter_;
-            settings.audioBeep = 1;
+            settings.audioBeep |= (BEEP_DOOR_ENABLE | BEEP_SENSEOR_ENABLE);
         }
     }
     else
@@ -49,7 +49,7 @@ void Door::doIdle()
         if(open_time_U16_)
         {
             open_time_U16_ = 0;
-            DisplayPanel::setAlarm(0);
+            //DisplayPanel::setAlarm(0);
         }
     }
     if(TimeOut(60)
@@ -59,10 +59,10 @@ void Door::doIdle()
         if(((Time::getMilisecondsU16() >> 8) & 0x02))
         {
             Buzzer::soundDoorError();
-            DisplayPanel::setAlarm(1);
+            //DisplayPanel::setAlarm(1);
         }
-        else
-            DisplayPanel::setAlarm(0);
+        //else
+        //    DisplayPanel::setAlarm(0);
     }
 }
 

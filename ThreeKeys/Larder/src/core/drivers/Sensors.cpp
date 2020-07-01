@@ -53,12 +53,24 @@ void Sensors::doIdle()
             idx = 0;
 
             if(_Ambiance == AnalogInputsADC::FAIL)
-                settings.state |= (REFRIGERATOR_STATE_ERROR_AMBI);
+            {
+                if((settings.state & REFRIGERATOR_STATE_ERROR_AMBI) == 0)
+                {
+                    settings.state |= (REFRIGERATOR_STATE_ERROR_AMBI);
+                    settings.audioBeep |= BEEP_SENSEOR_ENABLE;
+                }
+            }
             else
                 settings.state &= ~(REFRIGERATOR_STATE_ERROR_AMBI);
 
             if(_Evaporator == AnalogInputsADC::FAIL)
-                settings.state |= (REFRIGERATOR_STATE_ERROR_EVAP);
+            {
+                if((settings.state & REFRIGERATOR_STATE_ERROR_EVAP) == 0)
+                {
+                    settings.state |= (REFRIGERATOR_STATE_ERROR_EVAP);
+                    settings.audioBeep |= BEEP_SENSEOR_ENABLE;
+                }
+            }
             else
                 settings.state &= ~(REFRIGERATOR_STATE_ERROR_EVAP);
         }

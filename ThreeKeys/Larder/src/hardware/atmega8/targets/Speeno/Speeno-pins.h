@@ -19,29 +19,25 @@
 #define PINS_H_
 
 // pin configuration
-#define BUZZER_PIN          1
-#define LED_EN_PIN          2
-//pin 3 - 6  GND, Vcc, GND, VCC
-#define SEG_E_PIN		    7
-#define SEG_G_PIN		    8
-#define SEG_A_PIN		    9
-#define SEG_F_PIN		    10
-#define SEG_B_PIN           11
-#define SEG_C_PIN           12
-#define SEG_D_PIN		    13
-#define SEG_CA2_PIN		    14
-#define COMPRESSOR_PIN      15
-#define SEG_CA1_PIN		    16
-//pin 17 - 21 - GQ7, AVCC, n.c, AREF, GND, CN5, CN5
-//#define AMBIANCE_TEMP_PIN   22
-//#define DEFROST_TEMP_PIN    23
-#define AMBIANCE_TEMP_PIN   24
-//#define HEATER_PIN          25
-#define DEFROST_TEMP_PIN    26
-#define DOOR_PIN            27
-//pin 28 - n.c
-//pin 29 - RESET
-#define FAN_PIN             30
-//pin 31 - n.c
-#define LAMP_PIN            32
+#define COMPRESSOR_PIN		1
+//pin 2 - 6 - n.c, GND, Vcc, GND, VCC
+#define DISP_SDA		7 // SDA SM1612
+#define DISP_SCL		8 // SCL SM1612
+#define DOOR_PIN		9
+//pin 10 - n.c
+#define LED_PIN			11
+//pin 12 - n.c
+#define BUZZER_PIN		13
+//pin 14 - 17 - n.c, MOSI, MISO, SCK
+//pin 18 - 23 - AVCC, n.c, AREF, GND, n.c, n.c
+
+//pin 24 - A1
+#define AMBIANCE_TEMP_PIN	24
+//pin 25 - A2
+#define DEFROST_TEMP_PIN	25
+//pin 26 - 29 - n.c, n.c, n.c, RESET
+#define	LAMP_PIN		30
+#define FAN_PIN			31
+#define	HEATER_PIN		32
+
 #endif /* PINS_H_ */

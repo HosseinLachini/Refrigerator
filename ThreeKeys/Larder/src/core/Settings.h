@@ -24,7 +24,7 @@
 //#define THREE_KEYS_LARDER
 #ifdef THREE_KEYS_LARDER
 
-    #define MAX_TEMPERATURE_SETTING         80
+    #define MAX_TEMPERATURE_SETTING         8
 
     #define REFRIGERATOR_STATE_NORMAL       0x00
     //#define REFRIGERATOR_STATE_ECO          0x01
@@ -69,6 +69,10 @@
 #define TEST_NONE       0x00
 #define TEST_MODE       0x01
 #define TEST_STATE_MODE 0x02
+
+
+#define BEEP_SENSEOR_ENABLE     (1 << 0)
+#define BEEP_DOOR_ENABLE        (1 << 1)
 
 struct Settings {
 

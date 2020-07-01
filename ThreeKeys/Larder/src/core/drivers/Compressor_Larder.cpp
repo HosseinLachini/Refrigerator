@@ -32,8 +32,8 @@
 #define COMPERSSOR_IS_NEW_COMMAND()         (((state & COMPRESSOR_STATE_CUT_IN) && (state & COMPRESSOR_STATE_ON) == 0) || (((state & COMPRESSOR_STATE_CUT_IN) == 0) && (state & COMPRESSOR_STATE_ON)))
 
 #define COMPRESSOR_STATE_START              (1 << 0)
-#define COMPRESSOR_STATE_AMBIENCE           (1 << 1)
-#define COMPRESSOR_STATE_AMBIENCE_15SEC1    (1 << 2)
+#define COMPRESSOR_STATE_ERROR_AMBIENCE     (1 << 1)
+#define COMPRESSOR_STATE_ERROR_EVAP         (1 << 2)
 #define COMPRESSOR_STATE_AMBIENCE_15SEC2    (1 << 3)
 #define COMPRESSOR_STATE_EVAPORATOR         (1 << 4)
 #define COMPRESSOR_STATE_TIMOUT_10MIN       (1 << 5)
@@ -59,20 +59,23 @@ namespace Compressor {
     {
         if(settings.temperature > 50)
         {
-            return (Sensors::readEvaporator() > (settings.temperature + 5));
+            return (Sensors::readEvaporator() > (settings.temperature));
         }
-        return (Sensors::readEvaporator() > 50);
+        return (Sensors::readEvaporator() > (50-10));/// 10 degree for Mr Sharifi added!
     }
 
     bool cut_out_check() // off compressor
     {
+        if(settings.state & REFRIGERATOR_STATE_SUPER)
+            return ((Sensors::readAmbiance() <= 10) || (readTimer() >= COMPRESSOR_ON_6_HOUR));
         return (Sensors::readAmbiance() <= (settings.temperature - 10));
     }
 
     void setCompressor(uint8_t val)
     {
-        if(((hardware::getCompressor() == 0) && val)
-            || (hardware::getCompressor() && (val == 0))
+        if((((hardware::getCompressor() == 0) && val)
+            || (hardware::getCompressor() && (val == 0)))
+            && ((readTimer() >= (3*60)) || (state == COMPRESSOR_STATE_START))
             )
         {
             timer_U16_ = Time::getSecondsU16();
@@ -90,9 +93,13 @@ namespace Compressor {
         {
             if(readTimer() >= (10*60*60))
             {
-                if(Sensors::readAmbiance() >= 90)
+                if(Sensors::readAmbiance() >80)
                 {
-                    settings.state |= REFRIGERATOR_STATE_ERROR_LO;
+                    if((settings.state & REFRIGERATOR_STATE_ERROR_LO) == 0)
+                    {
+                        settings.state |= (REFRIGERATOR_STATE_ERROR_LO);
+                        settings.audioBeep |= BEEP_SENSEOR_ENABLE;
+                    }
                 }
             }
         }
@@ -104,6 +111,7 @@ void Compressor::doIdle()
     LO_error_check();
     if((settings.state & (REFRIGERATOR_STATE_ERROR_AMBI | REFRIGERATOR_STATE_ERROR_EVAP)) == (REFRIGERATOR_STATE_ERROR_AMBI | REFRIGERATOR_STATE_ERROR_EVAP))
     {
+        state |= (COMPRESSOR_STATE_ERROR_AMBIENCE | COMPRESSOR_STATE_ERROR_EVAP);
         if(hardware::getCompressor()
             && (readTimer() > (20*60))
         )
@@ -124,46 +132,49 @@ void Compressor::doIdle()
     {
         if(hardware::getCompressor() == 0)
         {
+            state |= (COMPRESSOR_STATE_ERROR_AMBIENCE);
             if(cut_in_check())
             {
                 setCompressor(1);
             }
-            return;
         }
-        if((readTimer() > (20*60))
-        // && (cut_in_check() == false)
+        else if((readTimer() > (20*60))
+         || ((state & COMPRESSOR_STATE_ERROR_AMBIENCE) == 0)
          )
             setCompressor(0);
+        state &= ~(COMPRESSOR_STATE_ERROR_EVAP);
         return;
     }
     if((settings.state & (REFRIGERATOR_STATE_ERROR_AMBI | REFRIGERATOR_STATE_ERROR_EVAP)) == REFRIGERATOR_STATE_ERROR_EVAP)
     {
         if(hardware::getCompressor())
         {
+            state |= (COMPRESSOR_STATE_ERROR_EVAP);
             if(cut_out_check())
             {
                 setCompressor(0);
-                return;
             }
-            return;
         }
-        if(((readTimer() > (20*60)) || (state == COMPRESSOR_STATE_START))
+        else if(((readTimer() > (20*60)) || (state == COMPRESSOR_STATE_START))
+         || ((state & COMPRESSOR_STATE_ERROR_EVAP) == 0)
         // && (cut_out_check() == false)
         )
             setCompressor(1);
+        state &= ~(COMPRESSOR_STATE_ERROR_AMBIENCE);
         return;
     }
+
+    state &= ~(COMPRESSOR_STATE_ERROR_AMBIENCE | COMPRESSOR_STATE_ERROR_EVAP);
+
     if(hardware::getCompressor())
     {
-        if(cut_out_check()
-        || ((settings.state & REFRIGERATOR_STATE_SUPER) && ((Sensors::readAmbiance() <= 10) || (readTimer() >= COMPRESSOR_ON_6_HOUR)))
-        )
+        if(cut_out_check())
         {
             setCompressor(0);
             if(settings.state & REFRIGERATOR_STATE_SUPER)
             {
                 settings.state &= ~REFRIGERATOR_STATE_SUPER;
-                settings.temperature = settings.temperature_backup;
+                //settings.temperature = settings.temperature_backup;
             }
         }
         return;

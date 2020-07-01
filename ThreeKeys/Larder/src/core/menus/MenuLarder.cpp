@@ -60,53 +60,75 @@ namespace Menu {
                 timer_set_temp_mode = 0;
             }
             DisplayPanel::setSuper(settings.state & REFRIGERATOR_STATE_SUPER);
-            DisplayPanel::setAlarm(settings.state & REFRIGERATOR_STATE_ERROR);
-            if(settings.state & REFRIGERATOR_STATE_ERROR)
+            //DisplayPanel::setAlarm((settings.state & REFRIGERATOR_STATE_ERROR) || (Door::isOpen() && ((Door::TimeOut(60) == 0) || (Time::getMilisecondsU16() >> 8) & 0x02)));
+
+            if(Door::TimeOut(60))
             {
-                Buzzer::soundError();
-                if((Time::getMilisecondsU16() >> 8) & 0x08)
-                {
-                    error_index |= 0x80;
-                    if(error_index == 0x80){
-                        if(settings.state & REFRIGERATOR_STATE_ERROR_AMBI)
-                            DisplayPanel::printErrorAmbiance();
-                        else
-                            error_index = 0x81;
-                    }
-                    if(error_index == 0x81){
-                        if((settings.state & REFRIGERATOR_STATE_ERROR_EVAP))
-                            DisplayPanel::printErrorEvaporator();
-                        else
-                            error_index = 0x82;
-                    }
-                    if(error_index == 0x82){
-                        if((settings.state & REFRIGERATOR_STATE_ERROR_LO))
-                            DisplayPanel::printErrorLO();
-                        else
-                            error_index = 0x80;
-                    }
-                }
+                DisplayPanel::setAlarm((Time::getMilisecondsU16() >> 8) & 0x02);
             }
-            if(((settings.state & REFRIGERATOR_STATE_ERROR) == 0) || (((Time::getMilisecondsU16() >> 8) & 0x08) == 0))
+            else
             {
-                if(error_index & 0x80){
-                    error_index &= ~0x80;
-                    error_index++;
-                    if(error_index > 2)
-                        error_index = 0;
-                }
-                switch((settings.state & REFRIGERATOR_STATE_SUPER))
+                DisplayPanel::setAlarm((settings.state & REFRIGERATOR_STATE_ERROR) && ((Time::getMilisecondsU16() >> 8) & 0x04));
+            }
+
+            if(timer_set_temp_mode)
+            {
+                if((((Time::getMilisecondsU16()) & 0x0200) == 0))
+                    DisplayPanel::printTemp(settings.temperature_backup);
+                else
+                    DisplayPanel::printBlank();
+                if(settings.state & REFRIGERATOR_STATE_ERROR)
+                    Buzzer::soundError();
+            }
+            else
+            {
+                if(settings.state & REFRIGERATOR_STATE_ERROR)
                 {
-                    case REFRIGERATOR_STATE_SUPER :
-                        DisplayPanel::printSu();
-                    break;
-                    case REFRIGERATOR_STATE_NORMAL :
-                        if(((settings.state & REFRIGERATOR_STATE_ERROR) == 0) && timer_set_temp_mode && (((Time::getMilisecondsU16()) & 0x0200) == 0))
-                            DisplayPanel::printBlank();
-                        else
-                            DisplayPanel::printTemp(settings.temperature_backup);
-                            //DisplayPanel::printTemp(Sensors::readAmbiance());
-                    break;
+                    Buzzer::soundError();
+                    if((Time::getMilisecondsU16() >> 8) & 0x08)
+                    {
+                        error_index |= 0x80;
+                        if(error_index == 0x80){
+                            if(settings.state & REFRIGERATOR_STATE_ERROR_AMBI)
+                                DisplayPanel::printErrorAmbiance();
+                            else
+                                error_index = 0x81;
+                        }
+                        if(error_index == 0x81){
+                            if((settings.state & REFRIGERATOR_STATE_ERROR_EVAP))
+                                DisplayPanel::printErrorEvaporator();
+                            else
+                                error_index = 0x82;
+                        }
+                        if(error_index == 0x82){
+                            if((settings.state & REFRIGERATOR_STATE_ERROR_LO))
+                                DisplayPanel::printErrorLO();
+                            else
+                                error_index = 0x80;
+                        }
+                    }
+                }
+                if(((settings.state & REFRIGERATOR_STATE_ERROR) == 0) || (((Time::getMilisecondsU16() >> 8) & 0x08) == 0))
+                {
+                    if(error_index & 0x80){
+                        error_index &= ~0x80;
+                        error_index++;
+                        if(error_index > 2)
+                            error_index = 0;
+                    }
+                    switch((settings.state & REFRIGERATOR_STATE_SUPER))
+                    {
+                        case REFRIGERATOR_STATE_SUPER :
+                            DisplayPanel::printSu();
+                        break;
+                        case REFRIGERATOR_STATE_NORMAL :
+                            if(((settings.state & REFRIGERATOR_STATE_ERROR) == 0) && timer_set_temp_mode && (((Time::getMilisecondsU16()) & 0x0200) == 0))
+                                DisplayPanel::printBlank();
+                            else
+                                DisplayPanel::printTemp(settings.temperature_backup);
+                                //DisplayPanel::printTemp(Sensors::readAmbiance());
+                        break;
+                    }
                 }
             }
         }
@@ -160,16 +182,16 @@ int8_t Menu::run(bool alwaysRefresh)
                 if(!waitRelease_)
                 {
                     settings.state ^= REFRIGERATOR_STATE_SUPER;
-                    if((settings.state & ~(REFRIGERATOR_STATE_ERROR)) == REFRIGERATOR_STATE_SUPER)
-                    {
-                        settings.temperature_backup = settings.temperature;
-                        settings.temperature = 1;
-                    }
-                    else
-                    {
-                        settings.state = REFRIGERATOR_STATE_NORMAL;/// | REFRIGERATOR_STATE_DEFROST;
-                        settings.temperature = settings.temperature_backup;
-                    }
+//                    if((settings.state & ~(REFRIGERATOR_STATE_ERROR)) == REFRIGERATOR_STATE_SUPER)
+//                    {
+//                        settings.temperature_backup = settings.temperature;
+//                        //settings.temperature = 1;
+//                    }
+//                    else
+//                    {
+//                        settings.state = REFRIGERATOR_STATE_NORMAL;/// | REFRIGERATOR_STATE_DEFROST;
+//                        settings.temperature = settings.temperature_backup;
+//                    }
                     waitRelease_ = true;
                 }
             break;
@@ -215,11 +237,11 @@ int8_t Menu::run(bool alwaysRefresh)
             case DisplayPanel::Temp :
                 if(timer_set_temp_mode)
                 {
-                    timer_set_temp_mode = Time::getMilisecondsU16();
-                    settings.temperature-=10;
-                    if(settings.temperature < (settings.min_temperature))
-                        settings.temperature = (settings.max_temperature);
-                    settings.temperature_backup = settings.temperature;
+                     timer_set_temp_mode = Time::getMilisecondsU16();
+                    settings.temperature_backup-=10;
+                    if(settings.temperature_backup < ((int16_t)(settings.min_temperature) * 10))
+                        settings.temperature_backup = ((int16_t)(settings.max_temperature) * 10);
+                    settings.temperature = settings.temperature_backup;
                 }
             break;
             case DisplayPanel::Alarm :
@@ -232,6 +254,14 @@ int8_t Menu::run(bool alwaysRefresh)
     {
         switch(key){
             case DisplayPanel::Temp :
+                if(timer_set_temp_mode)
+                {
+                     timer_set_temp_mode = Time::getMilisecondsU16();
+                    settings.temperature_backup-=10;
+                    if(settings.temperature_backup < ((int16_t)(settings.min_temperature) * 10))
+                        settings.temperature_backup = ((int16_t)(settings.max_temperature) * 10);
+                    //settings.temperature = settings.temperature_backup;
+                }
             break;
             case DisplayPanel::Alarm :
                 if(Door::isOpen() || (settings.state & REFRIGERATOR_STATE_ERROR))
