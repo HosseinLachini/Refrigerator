@@ -39,15 +39,18 @@ void setup()
     hardware::initialize();
     Time::initialize();
     // for prevent door counter auto increment and stable board
+    //while(1)
+    //    hardware::setBuzzer(1);
     Time::delay(1000);
     settings.power = true;
     settings.temperature_backup = settings.temperature = eeprom::read((uint16_t*)0);
-    settings.audioBeep = 1;
+    settings.state = REFRIGERATOR_STATE_NORMAL;
+    settings.audioBeep = (BEEP_DOOR_ENABLE | BEEP_SENSEOR_ENABLE);
     //Door::ResetTimer();
 
     settings.max_temperature = MAX_TEMPERATURE_SETTING;
-    settings.min_temperature = 10;
-    if((settings.temperature > settings.max_temperature) || (settings.temperature < settings.min_temperature))
+    settings.min_temperature = 1;
+    if((settings.temperature > ((int16_t)(settings.max_temperature) * 10)) || (settings.temperature < ((int16_t)(settings.min_temperature) * 10)))
     {
         settings.temperature_backup = settings.temperature = 50;
         eeprom::write((uint16_t*)(0), (uint16_t)(settings.temperature));

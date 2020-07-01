@@ -223,7 +223,7 @@ DisplayPanel::KeyType DisplayPanel::getKey(void)
 
 void DisplayPanel::doIdle()
 {
-    if(Time::diffU16(scan_time_U16_, Time::getInterruptsU16()) > 10)
+    //if(Time::diffU16(scan_time_U16_, Time::getInterruptsU16()) > 10)
     {
         scan_time_U16_ = Time::getInterruptsU16();
         if(settings.power)

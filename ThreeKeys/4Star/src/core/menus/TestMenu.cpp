@@ -94,10 +94,16 @@ void TestMenu::run()
                                     case 0:
                                         break;
                                     case 1:
-                                        DisplayPanel::printTemp(Sensors::readAmbiance());
+                                        if(Sensors::readAmbiance() == Sensors::FAIL)
+                                            DisplayPanel::printOn(0);
+                                        else
+                                            DisplayPanel::printTemp(Sensors::readAmbiance());
                                         break;
                                     case 2:
-                                        DisplayPanel::printTemp(Sensors::readEvaporator());
+                                        if(Sensors::readEvaporator() == Sensors::FAIL)
+                                            DisplayPanel::printOn(0);
+                                        else
+                                            DisplayPanel::printTemp(Sensors::readEvaporator());
                                         break;
                                     case 3:
                                         DisplayPanel::printOn(hardware::getCompressor());
@@ -129,6 +135,8 @@ void TestMenu::run()
                 }
                 Time::delayDoIdle(100);
                 key = DisplayPanel::getKey();
+                if(key != DisplayPanel::None)
+                    timer_menu_U16 = Time::getSecondsU16();
             }while((Time::diffU16(timer_menu_U16, Time::getSecondsU16()) < (2*60)) && ((index &  WAIT_RELASE_KEYS)  || (key != DisplayPanel::State)));
 
             settings.test_mode = TEST_NONE;

@@ -46,7 +46,7 @@ namespace Buzzer {
 
 void Buzzer::sound(Buzzer::SoundType s)
 {
-    if (!settings.audioBeep)
+    if (settings.audioBeep == 0)
         s = Off;
     if(sound_ == s)
         return;
@@ -126,19 +126,18 @@ uint8_t Buzzer::setOff()
 }
 
 
-
 uint8_t Buzzer::getKeyboard(uint16_t time)
 {
-    //time/=2;
-    if(time > 200)
+    time /= 50;
+    if(time > 2)
         return setOff();
-    return wave(time, 100);
+    return wave(time, 1);
 }
 
 
 uint8_t Buzzer::getSelect(uint16_t time)
 {
-    int v = time/1;//4;
+    int v = time/4;
     if(v > 200)
         return setOff();
     return wave(v, 10) + wave(v-40, 10);
@@ -163,7 +162,9 @@ uint8_t Buzzer::getSave(uint16_t time)
 
 uint8_t Buzzer::getStartProgram(uint16_t time)
 {
-    return getSelect(time);
+    if(time > 4000)
+        return setOff();
+    return wave(time/500, 2);
 }
 
 
@@ -190,15 +191,18 @@ uint8_t Buzzer::getReversedPolarity(uint16_t time)
 
 uint8_t Buzzer::getError(uint16_t time)
 {
-    if(time > 200)
+    if((settings.audioBeep & BEEP_SENSEOR_ENABLE) == 0)
+        return 0;
+    if(time > 4000)
         return setOff();
-    return wave(time, 100);
+    return wave(time/2000, 1);
 }
 
 uint8_t Buzzer::getDoorError(uint16_t time)
 {
-    if(time > 200)
+    if((settings.audioBeep & BEEP_DOOR_ENABLE) == 0)
+        return 0;
+    if(time > 2000)
         return setOff();
-    return wave(time, 100);
+    return wave(time/1000, 1);
 }
-

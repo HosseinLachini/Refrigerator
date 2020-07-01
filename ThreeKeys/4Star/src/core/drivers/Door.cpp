@@ -41,7 +41,7 @@ void Door::doIdle()
             open_time_U16_ = Time::getSecondsU16();
             if(counter_ < 0xff)
                 ++counter_;
-            settings.audioBeep = 1;
+            settings.audioBeep |= (BEEP_DOOR_ENABLE | BEEP_SENSEOR_ENABLE);
         }
     }
     else
