@@ -75,11 +75,11 @@ Features
   
 Touch Display Panel
 ------
-Touch display panel used for Boran product in PARS Mfg. I worked on two model's.The first touch display panel based on the [SM1612]](http://pdf.dzsc.com/99999/2016111142339896.pdf) China chip with China languge datasheet! SM1612 sacn LED's and scan touch Key's with [TS08N](http://www.touchsemi.com/Pages/20_Standard_e/TS08_%288CH_Sensor%29_e/TS08N.pdf), MCU connect via I2C to SM1612 for read touch key's and write to LED's.
+Touch display panel used for Boran product in PARS Mfg. I worked on two model's.The first touch display panel based on the [SM1612](http://pdf.dzsc.com/99999/2016111142339896.pdf) China chip with China languge datasheet! SM1612 sacn LED's and scan touch Key's with [TS08N](http://www.touchsemi.com/Pages/20_Standard_e/TS08_%288CH_Sensor%29_e/TS08N.pdf), MCU connect via I2C to SM1612 for read touch key's and write to LED's.
 
 ![PARS Touch Display Panel](/TouchPanel/SM1612/Boran/doc/Photo/DisplayPanel.jpg)
 
-
+The second touch display panel based on [HOLTEK](https://www.holtek.com) MCU ([BS86B12A-3](https://www.holtek.com/documents/10179/116711/BS86B12A-3_C16A-3_D20A-3v140.pdf) Touch A/D Flash MCU with LED/LCD Driver).
 
 WARNING
 -------
