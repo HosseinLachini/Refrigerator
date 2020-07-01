@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Release" />
+	<File name="drivers/Door.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1896" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="drivers/Compressor_Nofrost.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1045" topLine="13" />
+		</Cursor>
+	</File>
+	<File name="../hardware/atmega8/targets/ThreeKeys/ThreeKeys-pins.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1185" topLine="21" />
+		</Cursor>
+	</File>
+	<File name="ParsRefrigerator.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1563" topLine="35" />
+		</Cursor>
+	</File>
+	<File name="../hardware/atmega8/targets/ThreeKeys/AnalogInputsADC.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="902" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="drivers/Three_Push_Button_Switch.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9293" topLine="273" />
+		</Cursor>
+	</File>
+	<File name="drivers/Time.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="469" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="drivers/Three_Push_Button_Switch.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="169" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="../hardware/atmega8/targets/ThreeKeys/ThreeKeys.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1241" topLine="24" />
+		</Cursor>
+	</File>
+	<File name="menus/TestMenu.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6087" topLine="128" />
+		</Cursor>
+	</File>
+	<File name="drivers/Sensors.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1009" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="drivers/Lamp.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="26" />
+		</Cursor>
+	</File>
+	<File name="menus/MainMenu.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1046" topLine="20" />
+		</Cursor>
+	</File>
+	<File name="../hardware/atmega8/cpu/IO.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9130" topLine="42" />
+		</Cursor>
+	</File>
+	<File name="drivers/Buzzer.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4442" topLine="182" />
+		</Cursor>
+	</File>
+	<File name="../hardware/atmega8/targets/ThreeKeys/ThreeKeys.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1832" topLine="48" />
+		</Cursor>
+	</File>
+	<File name="menus/MenuNofrost.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2636" topLine="55" />
+		</Cursor>
+	</File>
+	<File name="drivers/Heater.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1587" topLine="39" />
+		</Cursor>
+	</File>
+	<File name="Settings.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1085" topLine="26" />
+		</Cursor>
+	</File>
+	<File name="../hardware/atmega8/targets/ThreeKeys/AnalogInputsADC.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1323" topLine="21" />
+		</Cursor>
+	</File>
+	<File name="Settings.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2796" topLine="93" />
+		</Cursor>
+	</File>
+	<File name="drivers/Time.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="859" topLine="30" />
+		</Cursor>
+	</File>
+	<File name="drivers/Sensors.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2188" topLine="0" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>

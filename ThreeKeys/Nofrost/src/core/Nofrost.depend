@@ -1,0 +1,228 @@
+# depslib dependency file v1.0
+1583760736 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/hardware/atmega8/cpu/Timer2.cpp
+	"Time.h"
+	"Hardware.h"
+	"atomic.h"
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Time.h
+	"Hardware.h"
+
+1578222850 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/hardware/atmega8/targets/ThreeKeys/Hardware.h
+	"ThreeKeys.h"
+
+1588134944 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/hardware/atmega8/targets/ThreeKeys/ThreeKeys.h
+	<stdint.h>
+	"HardwareConfig.h"
+	"Time.h"
+
+1578222866 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/hardware/atmega8/targets/ThreeKeys/HardwareConfig.h
+	"GlobalConfig.h"
+	"ThreeKeys-pins.h"
+
+1581506502 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/GlobalConfig.h
+
+1589786582 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/hardware/atmega8/targets/ThreeKeys/ThreeKeys-pins.h
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/hardware/atmega8/cpu/atomic.h
+	<util/atomic.h>
+
+1555243914 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/hardware/atmega8/cpu/Utils.cpp
+	"Utils.h"
+	<util/delay.h>
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/Utils.h
+	"AnalogInputsTypes.h"
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/AnalogInputsTypes.h
+	<stdint.h>
+
+1586849476 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/hardware/atmega8/targets/ThreeKeys/AnalogInputsADC.cpp
+	"AnalogInputsADC.h"
+	"IO.h"
+	<avr/pgmspace.h>
+
+1586796552 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/hardware/atmega8/targets/ThreeKeys/AnalogInputsADC.h
+	<stdint.h>
+
+1587968392 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/hardware/atmega8/cpu/IO.h
+	<stdint.h>
+	<avr/io.h>
+
+1588219426 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/hardware/atmega8/targets/ThreeKeys/ThreeKeys.cpp
+	"Hardware.h"
+	"IO.h"
+	"AnalogInputsADC.h"
+
+1590828712 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Buzzer.cpp
+	"Hardware.h"
+	"Buzzer.h"
+	"Settings.h"
+
+1567605508 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Buzzer.h
+
+1590983350 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/Settings.h
+	<stdint.h>
+	"AnalogInputs.h"
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/AnalogInputs.h
+	"AnalogInputsTypes.h"
+	"HardwareConfig.h"
+	"cpu/config.h"
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/hardware/atmega8/cpu/config.h
+
+1591869996 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Compressor_Nofrost.cpp
+	"Compressor.h"
+	"Hardware.h"
+	"Settings.h"
+	"Time.h"
+	"Sensors.h"
+	"Door.h"
+
+1586440294 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Compressor.h
+	<stdint.h>
+
+1586796382 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Sensors.h
+	<stdint.h>
+
+1579338710 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Door.h
+	<stdint.h>
+
+1590835510 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Door.cpp
+	"Hardware.h"
+	"Buzzer.h"
+	"Door.h"
+	"DisplayPanel.h"
+	"Settings.h"
+
+1586418496 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/DisplayPanel.h
+	"Three_Push_Button_Switch.h"
+	"SM1612.h"
+
+1588152042 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Three_Push_Button_Switch.h
+	<stdint.h>
+
+1591527948 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Heater.cpp
+	"Heater.h"
+	"Hardware.h"
+	"Settings.h"
+	"Sensors.h"
+	"Compressor.h"
+
+1580138246 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Heater.h
+	<stdint.h>
+
+1586595456 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Lamp.cpp
+	"Lamp.h"
+	"Hardware.h"
+	"Buzzer.h"
+	"Door.h"
+
+1586448664 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Lamp.h
+
+1591006840 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Sensors.cpp
+	"Sensors.h"
+	"AnalogInputsADC.h"
+	"Hardware.h"
+	"Settings.h"
+
+1591524710 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Three_Push_Button_Switch.cpp
+	"DisplayPanel.h"
+	"Buzzer.h"
+	"Hardware.h"
+	"memory.h"
+	"Settings.h"
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/hardware/atmega8/cpu/memory.h
+	<avr/pgmspace.h>
+	<avr/eeprom.h>
+
+1588225254 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/drivers/Time.cpp
+	"Time.h"
+	"Hardware.h"
+	"Buzzer.h"
+	"Lamp.h"
+	"Door.h"
+	"DisplayPanel.h"
+	"Compressor.h"
+	"Sensors.h"
+	"Heater.h"
+	"Settings.h"
+	"atomic.h"
+
+1591017076 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/menus/MainMenu.cpp
+	"MainMenu.h"
+	"Menu.h"
+	"Time.h"
+	"TestMenu.h"
+	"Settings.h"
+	<stdint.h>
+
+1571047300 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/menus/MainMenu.h
+
+1580027092 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/menus/Menu.h
+	<stdint.h>
+
+1581251230 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/menus/TestMenu.h
+
+1592127332 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/menus/MenuNofrost.cpp
+	"Menu.h"
+	"Settings.h"
+	"DisplayPanel.h"
+	"Time.h"
+	"Sensors.h"
+	"Door.h"
+	"Buzzer.h"
+	"Compressor.h"
+	"memory.h"
+	"Heater.h"
+
+1591076324 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/menus/TestMenu.cpp
+	"TestMenu.h"
+	"Time.h"
+	"Settings.h"
+	"DisplayPanel.h"
+	"Buzzer.h"
+	"Compressor.h"
+	"Lamp.h"
+	"Heater.h"
+	"Sensors.h"
+	"Hardware.h"
+
+1591006402 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/ParsRefrigerator.cpp
+	"ParsRefrigerator.h"
+	"Buzzer.h"
+	"Door.h"
+	"Hardware.h"
+	"cpu.h"
+	"Settings.h"
+	"DisplayPanel.h"
+	"AnalogInputsADC.h"
+	"Compressor.h"
+	"Sensors.h"
+	"MainMenu.h"
+	"memory.h"
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/ParsRefrigerator.h
+
+1555243914 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/hardware/atmega8/cpu/cpu.h
+	<avr/interrupt.h>
+
+1581506252 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/Settings.cpp
+	"Hardware.h"
+	"memory.h"
+	"Buzzer.h"
+	"Settings.h"
+	"eeprom.h"
+
+1581508862 /media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/eeprom.h
+	"AnalogInputs.h"
+	"Settings.h"
+	"cpu.h"
+
+1570958526 source:/media/lachini/Sony_32SA1/Refrigerator/github/ThreeKeys/Nofrost/src/core/Utils.cpp
+	"Utils.h"
+	"Hardware.h"
+	"AnalogInputs.h"
+	"memory.h"
+

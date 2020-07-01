@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Nofrost" />
+		<Option pch_mode="2" />
+		<Option compiler="avr-gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Nofrost.elf" prefix_auto="1" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="5" />
+				<Option compiler="avr-gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="core/drivers" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Nofrost.elf" prefix_auto="1" extension_auto="0" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="5" />
+				<Option compiler="avr-gcc" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add directory="core/drivers" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Environment>
+				<Variable name="MCU" value="atmega8" />
+			</Environment>
+		</Build>
+		<Compiler>
+			<Add option="-mmcu=atmega8" />
+			<Add option="-Wall" />
+			<Add option="-DF_CPU=8000000UL" />
+			<Add option="-DTHREE_KEYS_LARDER" />
+			<Add directory="../hardware/atmega8/cpu" />
+			<Add directory="../hardware/atmega8/targets/ThreeKeys" />
+			<Add directory="../hardware/atmega8" />
+			<Add directory="../core" />
+			<Add directory="drivers" />
+			<Add directory="menus" />
+		</Compiler>
+		<Linker>
+			<Add option="-mmcu=atmega8" />
+			<Add option="-Wl,-Map=$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).map,--cref" />
+		</Linker>
+		<ExtraCommands>
+			<Add after="avr-size $(TARGET_OUTPUT_FILE)" />
+			<Add after="avr-objdump -h -S $(TARGET_OUTPUT_FILE) &gt; $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).lss" />
+			<Add after="avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).hex" />
+			<Add after="avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).eep" />
+			<Add after="avr-objcopy --no-change-warnings -j .lock --change-section-lma .lock=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).lock" />
+			<Add after="avr-objcopy --no-change-warnings -j .signature --change-section-lma .signature=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).sig" />
+			<Add after="avr-objcopy --no-change-warnings -j .fuse --change-section-lma .fuse=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).fuse" />
+			<Add after="avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O srec $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).srec" />
+			<Add after="avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O srec $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).eep" />
+			<Add after="avr-objcopy --no-change-warnings -j .lock --change-section-lma .lock=0 -O srec $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).lock" />
+			<Add after="avr-objcopy --no-change-warnings -j .signature --change-section-lma .signature=0 -O srec $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).sig" />
+			<Add after="avr-objcopy --no-change-warnings -j .fuse --change-section-lma .fuse=0 -O srec $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).fuse" />
+			<Add after="avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
+			<Add after="avr-objcopy --no-change-warnings -j .eeprom --change-section-lma .eeprom=0 -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).eep" />
+			<Add after="avr-objcopy --no-change-warnings -j .lock --change-section-lma .lock=0 -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).lock" />
+			<Add after="avr-objcopy --no-change-warnings -j .signature --change-section-lma .signature=0 -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).sig" />
+			<Add after="avr-objcopy --no-change-warnings -j .fuse --change-section-lma .fuse=0 -O binary $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).fuse" />
+			<Add after="avr-objcopy -I ihex $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).hex -O binary $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).bin" />
+		</ExtraCommands>
+		<Unit filename="../hardware/atmega8/cpu/IO.h" />
+		<Unit filename="../hardware/atmega8/cpu/Timer2.cpp" />
+		<Unit filename="../hardware/atmega8/cpu/Utils.cpp" />
+		<Unit filename="../hardware/atmega8/cpu/atomic.h" />
+		<Unit filename="../hardware/atmega8/cpu/config.h" />
+		<Unit filename="../hardware/atmega8/cpu/memory.h" />
+		<Unit filename="../hardware/atmega8/targets/ThreeKeys/AnalogInputsADC.cpp" />
+		<Unit filename="../hardware/atmega8/targets/ThreeKeys/AnalogInputsADC.h" />
+		<Unit filename="../hardware/atmega8/targets/ThreeKeys/Hardware.h" />
+		<Unit filename="../hardware/atmega8/targets/ThreeKeys/HardwareConfig.h" />
+		<Unit filename="../hardware/atmega8/targets/ThreeKeys/ThreeKeys-pins.h" />
+		<Unit filename="../hardware/atmega8/targets/ThreeKeys/ThreeKeys.cpp" />
+		<Unit filename="../hardware/atmega8/targets/ThreeKeys/ThreeKeys.h" />
+		<Unit filename="GlobalConfig.h" />
+		<Unit filename="ParsRefrigerator.cpp" />
+		<Unit filename="ParsRefrigerator.h" />
+		<Unit filename="Settings.cpp" />
+		<Unit filename="Settings.h" />
+		<Unit filename="Utils.cpp" />
+		<Unit filename="Utils.h" />
+		<Unit filename="drivers/Buzzer.cpp" />
+		<Unit filename="drivers/Buzzer.h" />
+		<Unit filename="drivers/Compressor.h" />
+		<Unit filename="drivers/Compressor_Nofrost.cpp" />
+		<Unit filename="drivers/DisplayPanel.h" />
+		<Unit filename="drivers/Door.cpp" />
+		<Unit filename="drivers/Door.h" />
+		<Unit filename="drivers/Heater.cpp" />
+		<Unit filename="drivers/Heater.h" />
+		<Unit filename="drivers/Lamp.cpp" />
+		<Unit filename="drivers/Lamp.h" />
+		<Unit filename="drivers/Sensors.cpp" />
+		<Unit filename="drivers/Sensors.h" />
+		<Unit filename="drivers/Three_Push_Button_Switch.cpp" />
+		<Unit filename="drivers/Three_Push_Button_Switch.h" />
+		<Unit filename="drivers/Time.cpp" />
+		<Unit filename="drivers/Time.h" />
+		<Unit filename="menus/MainMenu.cpp" />
+		<Unit filename="menus/MainMenu.h" />
+		<Unit filename="menus/Menu.h" />
+		<Unit filename="menus/MenuNofrost.cpp" />
+		<Unit filename="menus/TestMenu.cpp" />
+		<Unit filename="menus/TestMenu.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
