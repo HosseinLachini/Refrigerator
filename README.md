@@ -81,6 +81,9 @@ Touch display panel used for Boran product in PARS Mfg. I worked on two model's.
 
 The second touch display panel based on [HOLTEK](https://www.holtek.com) MCU ([BS86D20A-3](https://www.holtek.com/documents/10179/116711/BS86B12A-3_C16A-3_D20A-3v140.pdf) Touch A/D Flash MCU with LED/LCD Driver).
 
+![PARS Touch Display Panel](/TouchPanel/BS86D20A-3/Boran/doc/Photo/Parlar.png)
+
+
 WARNING
 -------
 
